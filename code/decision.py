@@ -35,6 +35,18 @@ def decision_step(Rover):
                     Rover.steer = 0
                     Rover.mode = 'stop'
 
+            # if Rover.samples_pos is not None:
+
+            #     # Slow down and go toward the sample
+            #     rock_ang = np.arctan2(Rover.pos[1]-Rover.samples_pos[1], Rover.pos[0]-Rover.samples_pos[0])
+            #     if(Rover.near_sample):
+            #         Rover.brake = Rover.brake_set
+            #         Rover.steer = 0
+            #         Rover.mode = 'stop'
+            #         Rover.vel = 0
+            #     else:
+            #         Rover.steer = np.clip(np.mean(rock_ang * 180/np.pi), -15, 15)
+                    
         # If we're already in "stop" mode then make different decisions
         elif Rover.mode == 'stop':
             # If we're in stop mode but still moving keep braking
@@ -70,6 +82,7 @@ def decision_step(Rover):
     # If in a state where want to pickup a rock send pickup command
     if Rover.near_sample and Rover.vel == 0 and not Rover.picking_up:
         Rover.send_pickup = True
+        Rover.samples_pos = None
     
     return Rover
 
