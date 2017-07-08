@@ -13,13 +13,12 @@
 
 #### 1. Populate the `process_image()` function with the appropriate analysis steps to map pixels identifying navigable terrain, obstacles and rock samples into a worldmap.  Run `process_image()` on your test data using the `moviepy` functions provided to create video output of your result. 
 -After reading every new image the we have to take the following steps to analysis the image and determine the navigable path, obstacles, and rock samples.
-       1) Define source and destination points for perspective transform
-       2) Apply perspective transform
-       3) Apply color threshold to identify navigable terrain/obstacles/rock samples
-	  - here we get the location of pixels in the image plane.
-       4) Convert Image plane location to rover-centric location
-       5)  To calculate the fidelity and map the world we have to Convert rover-centric pixel values to world coords
-       6) Update worldmap
+       1) Define source and destination points for perspective transform.
+       2) Apply perspective transform.
+       3) Apply color threshold to identify navigable terrain/obstacles/rock samples,here we get the location of pixels in the image plane.
+       4) Convert Image plane location to rover-centric location.
+       5)  To calculate the fidelity and map the world we have to Convert rover-centric pixel values to world coords.
+       6) Update worldmap.
        7) After this we can use the information to make decision and also display.
 
 ![alt text][image2]
