@@ -12,14 +12,14 @@
 ![alt text][image1]
 
 #### 1. Populate the `process_image()` function with the appropriate analysis steps to map pixels identifying navigable terrain, obstacles and rock samples into a worldmap.  Run `process_image()` on your test data using the `moviepy` functions provided to create video output of your result. 
--After reading every new image the we have to take the following steps to analysis the image and determine the navigable path, obstacles, and rock samples.
-       1) Define source and destination points for perspective transform.
-       2) Apply perspective transform.
-       3) Apply color threshold to identify navigable terrain/obstacles/rock samples,here we get the location of pixels in the image plane.
-       4) Convert Image plane location to rover-centric location.
-       5)  To calculate the fidelity and map the world we have to Convert rover-centric pixel values to world coords.
-       6) Update worldmap.
-       7) After this we can use the information to make decision and also display.
+-After reading every new image the we have to take the following steps to analysis the image and determine the navigable path, obstacles, and rock samples.<br />
+       1) Define source and destination points for perspective transform.<br />
+       2) Apply perspective transform.<br />
+       3) Apply color threshold to identify navigable terrain/obstacles/rock samples,here we get the location of pixels in the image plane.<br />
+       4) Convert Image plane location to rover-centric location.<br />
+       5) To calculate the fidelity and map the world we have to Convert rover-centric pixel values to world coords.<br />
+       6) Update worldmap.<br />
+       7) After this we can use the information to make decision and also display.<br />
 
 ![alt text][image2]
 ### Autonomous Navigation and Mapping
@@ -28,12 +28,10 @@
 -Basicly copied the same fucntion in the notebook to perception.py.
 
 #### 2. Launching in autonomous mode your rover can navigate and map autonomously.  Explain your results and how you might improve them in your writeup.
-The rover is able to navigate and fulfill the minimum requiment but my goal is to change the decission_step() so the rover can navigate to a specefic loction in the world map.
+-The rover is able to navigate and fulfill the minimum requiment but my goal is to change the decission_step() so the rover can navigate to a specefic loction in the world map.
 
 **Note: running the simulator with different choices of resolution and graphics quality may produce different results, particularly on different machines!  Make a note of your simulator settings (resolution and graphics quality set on launch) and frames per second (FPS output to terminal by `drive_rover.py`) in your writeup when you submit the project so your reviewer can reproduce your results.**
-
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.
-I use all the guid line in the walkthrough video as I was really late hope to catch-up soon.
+-I used all the guid line in the walkthrough video as I was really late hope to catch-up soon.
 
 
 
